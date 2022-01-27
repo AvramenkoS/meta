@@ -1,0 +1,288 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    min-width: 320px;
+    background: #e0e8f3;
+    color: #495463;
+}
+
+.auth__header, .auth__form, .auth__footer {
+    width: 440px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.auth__header {
+    padding: 40px 30px 30px;
+}
+
+.auth__footer {
+    padding: 20px 30px 30px;
+}
+
+.auth__wrap {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.auth__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth__logo img {
+    width: 100%;
+    max-height: 100px;
+    max-width: 220px;
+}
+
+.auth__form .card {
+    background: #fff;
+    border-radius: 6px;
+    padding: 35px 40px;
+    box-shadow: 0 0 25px 0 rgb(0 0 0 / 5%);
+}
+
+.card-head {
+    padding-bottom: 23px;
+}
+
+.card-head h2 {
+    font-size: 2.8em;
+    font-weight: 300;
+    margin: 0 auto 12px;
+}
+
+.card-head span {
+    font-size: 1.36em;
+    font-weight: 400;
+}
+
+.auth__footer,
+.auth__footer a {
+    color: #758698;
+    font-size: 13px;
+}
+
+.footer__links {
+    margin-bottom: 5px;
+}
+
+.auth__footer a {
+    padding: 0 10px;
+    transition: color .2s linear;
+}
+
+.auth__footer a:hover {
+    color: #2c80ff;
+}
+
+.input-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.input-item input[type="text"],
+.input-item input[type="email"],
+.input-item input[type="password"] {
+    border-radius: 4px;
+    border: 1px solid #d2dde9;
+    width: 100%;
+    padding: 10px 15px;
+    line-height: 20px;
+    font-size: .9em;
+    color: rgba(73, 84, 99, .7);
+    transition: all .4s;
+    box-sizing: border-box;
+    margin-bottom: 0;
+}
+
+.input-item input::placeholder {
+    font-size: 1.1em;
+    color: rgba(73, 84, 99, .7);
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+    box-shadow: 0 1px 5px rgb(73 84 99 / 10%);
+    outline: none;
+    border-color: #b1becc;
+    color: #495463;
+}
+
+button[type="submit"].btn {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: .01em;
+    border-radius: 4px;
+    min-width: 160px;
+    border: 1px solid #2c80ff;
+    transition: all .4s ease;
+    display: block;
+    width: 100%;
+    background: #2c80ff;
+    padding: 8px 20px;
+    font-size: 14px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: auto;
+}
+
+.form-note {
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+.form-note a {
+    font-weight: bold;
+}
+
+.form-check {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.input-checkbox ~ label:not(.error), .input-radio ~ label:not(.error) {
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 0;
+    color: #495463;
+    padding-left: 42px;
+    position: relative;
+    cursor: pointer;
+    transition: all .4s;
+    text-transform: initial;
+    display: block;
+}
+
+.input-checkbox-md ~ label:not(.error), .input-radio-md ~ label:not(.error) {
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 36px;
+}
+
+.input-checkbox ~ label:not(.error):before, .input-checkbox ~ label:not(.error):after, .input-radio ~ label:not(.error):before, .input-radio ~ label:not(.error):after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    transition: all .4s;
+}
+
+.input-checkbox ~ label:not(.error):before, .input-radio ~ label:not(.error):before {
+    content: '';
+    border: 2px solid #d2dde9;
+}
+
+.input-checkbox-md ~ label:not(.error):before, .input-checkbox-md ~ label:not(.error):after, .input-radio-md ~ label:not(.error):before, .input-radio-md ~ label:not(.error):after {
+    height: 24px;
+    width: 24px;
+}
+
+.input-checkbox ~ label:not(.error):after, .input-radio ~ label:not(.error):after {
+    line-height: 30px;
+    text-align: center;
+    font-family: themify;
+    content: '\e64c';
+    font-size: 14px;
+    font-weight: 900;
+    color: #fff;
+    background: #2c80ff;
+    opacity: 0;
+}
+
+.input-checkbox:checked ~ label:not(.error):after, .input-radio:checked ~ label:not(.error):after {
+    opacity: 1;
+}
+
+.text-success {
+    color: #00d285;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.btn-success {
+    max-width: 160px;
+}
+
+.terms-header {
+    background: #253992;
+    z-index: 1003;
+    position: fixed;
+    width: 100%;
+    height: 74px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.terms-logo {
+    padding: 13px 0;
+}
+
+.terms-logo img {
+    width: 100%;
+    height: 40px;
+}
+
+.terms-body {
+    width: 100%;
+    margin-top: 120px;
+}
+
+.terms-body h3 {
+    font-weight: 300;
+    font-size: 2.57em;
+    text-align: center;
+}
+
+.terms-body h5 {
+    font-family: roboto, sans-serif;
+    color: rgb(10, 62, 58);
+    font-size: 1.62em;
+}
+
+.terms-body p {
+    font-size: 15px;
+    color: rgb(77, 79, 78);
+}
+
+.terms-body tbody {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.body-content {
+    position: relative;
+    padding: 15px 18px;
+    border-color: #e6effb !important;
+    border: none;
+    background: #fff;
+    transition: background .4s, border-color .4s, color .4s;
+    vertical-align: top;
+    border-radius: 4px;
+    margin: 50px auto 30px;
+}

@@ -1,0 +1,8 @@
+export {default as LoginPage} from './LoginPage'
+export {default as RegisterPage} from './RegisterPage'
+export {default as CreatePage} from './CreatePage'
+export {default as DetailPage} from './DetailPage'
+export {default as LinksPage} from './LinksPage'
+export {default as SuccessPage} from './SuccessPage'
+export {default as PolicyPage} from './PolicyPage'
+export {default as TermsPage} from './TermsPage'
